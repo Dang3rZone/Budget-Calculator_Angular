@@ -25,7 +25,8 @@ $link: $purple;
 // Update some of Bulma's component variables
 $body-background-color: #fff;
 $control-border-width: 2px;
-$input-border-color: $light-grey;
+$input-border-color: transparent;
+$input-background-color: $light-grey;
 $input-shadow: none;
 
 // Import only what you need from Bulma

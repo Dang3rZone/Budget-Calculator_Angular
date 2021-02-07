@@ -5,6 +5,13 @@
   width: 100%;
   position: relative;
 
+  &:hover {
+    .x-icon-button {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
   .x-icon-button {
     position: absolute;
     height: 34px;
@@ -17,14 +24,13 @@
     right: -17px;
     top: -17px;
 
-    transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
     transform: scale(0);
-  }
+    opacity: 0;
+    cursor: pointer;
 
-  &:hover {
-    .x-icon-button {
-      opacity: 1;
-      transform: scale(1);
+    &:hover {
+      transform: scale(1.2);
     }
   }
 }
@@ -36,7 +42,11 @@
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.2s ease-out;
 
+  &:hover {
+    background-color: darken($light-grey, 2%);
+  }
   .description {
     display: flex;
     flex-grow: 1;

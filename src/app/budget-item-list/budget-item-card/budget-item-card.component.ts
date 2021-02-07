@@ -6,7 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./budget-item-card.component.scss'],
 })
 export class BudgetItemCardComponent implements OnInit {
-  @Input() isIncome: boolean;
+  @Input() isIncome: boolean = true;
+
   constructor() {}
 
   ngOnInit(): void {}

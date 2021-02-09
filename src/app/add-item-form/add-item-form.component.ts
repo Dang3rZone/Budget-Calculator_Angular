@@ -15,7 +15,9 @@ export class AddItemFormComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
   onSubmit(form: NgForm) {
     this.formSubmit.emit(form.value);
+    form.reset();
   }
 }

@@ -9,6 +9,7 @@ import { BudgetItem } from 'src/shared/models/budget-item.models';
 export class BudgetItemCardComponent implements OnInit {
   @Input() item: BudgetItem;
   @Output() xDeleteClick: EventEmitter<any> = new EventEmitter<any>();
+  @Output() cardClick: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {}
 
@@ -16,5 +17,9 @@ export class BudgetItemCardComponent implements OnInit {
 
   deleteClick() {
     this.xDeleteClick.emit();
+  }
+
+  onCardClick() {
+    this.cardClick.emit();
   }
 }
